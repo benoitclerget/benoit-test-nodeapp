@@ -12,7 +12,6 @@ module.exports = function(app, appName, appVersion, gitRepo) {
   router.get('/api/system_infos', async function(req, res) {
     let result = {
       err: null,
-      repository: gitRepo,
       system: {
         arch: os.arch(),
         cpus: os.cpus(),
@@ -31,7 +30,8 @@ module.exports = function(app, appName, appVersion, gitRepo) {
       web_app: {
         name: appName,
         version: appVersion,
-        dirname: __dirname
+        dirname: __dirname,
+        repository: gitRepo,
       }
     }
     // get nodejs version

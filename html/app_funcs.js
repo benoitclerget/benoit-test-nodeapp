@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", async function() {
             app_div_webapp_infos_elem.innerHTML = `<span class="app--type-mono-scale_4">Name: ${myJson.web_app.name}</span><br />
             <span class="app--type-mono-scale_4">Version: ${myJson.web_app.version}</span><br />
             <span class="app--type-mono-scale_4">Nodejs: ${myJson.web_app.node_js}</span><br />
-            <span class="app--type-mono-scale_4"><a href="${myJson.repository.url}" target="_blank">Git repository</a></span>
+            <span class="app--type-mono-scale_4"><a href="${myJson.web_app.repository.url}" target="_blank">Git repository</a></span>
             `
             let app_div_system_infos_elem = document.getElementById('app_system_infos');
             let system_infos_tmp = ``
             if(myJson.system.docker) {
               system_infos_tmp.innerHTML = `<span class="app--type-mono-scale_4">Run in docker container: <span style="color: green">Yes</span></span><br />`
             }
-            if(myJson.system.kubernetes) {
+            if(myJson.system.kubepods) {
               system_infos_tmp += `<span class="app--type-mono-scale_4">Run in Kubernetes pods: <span style="color: green">Yes</span></span><br />`
             }
             system_infos_tmp += `<span class="app--type-mono-scale_4">Hostname: ${myJson.system.hostname}</span><br />
