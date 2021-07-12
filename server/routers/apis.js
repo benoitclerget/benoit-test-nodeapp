@@ -5,13 +5,14 @@ const exec = util.promisify(require('child_process').exec)
 const express = require('express')
 const httpStatus = require('http-status')
 
-module.exports = function(app, appName, appVersion) {
+module.exports = function(app, appName, appVersion, gitRepo) {
   const router = express.Router()
 
   // system infos
   router.get('/api/system_infos', async function(req, res) {
     let result = {
       err: null,
+      repository: gitRepo,
       system: {
         arch: os.arch(),
         cpus: os.cpus(),

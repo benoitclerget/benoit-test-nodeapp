@@ -15,6 +15,7 @@ var appEnv = cfenv.getAppEnv()
 // retrieve app name and versin from package.json
 const appName = require('./../package').name
 const appVersion = require('./../package').version
+const gitRepo = require('./../package').repository
 
 // variables used when server is running in local (port, etc...) 
 const localConfig = require('./config/local.json')
@@ -110,7 +111,7 @@ app.use (function (req, res, next) {
 
 
 // set API routes
-require('./routers/index')(app, appName, appVersion)
+require('./routers/index')(app, appName, appVersion, gitRepo)
 
 /// catch page not found 404 and forward to error handler
 app.use(function(req, res, next) {
