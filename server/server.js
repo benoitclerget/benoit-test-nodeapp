@@ -85,6 +85,7 @@ if (appEnv.isLocal) {
 //the "X-Forwarded-Proto" header field to be trusted so its
 //value can be used to determine the protocol. See 
 //http://expressjs.com/api#app-settings for more details.
+/*
 app.enable('trust proxy')
 
 app.use (function (req, res, next) {
@@ -105,7 +106,7 @@ app.use (function (req, res, next) {
     }
   }
 });
-
+*/
 
 
 // set API routes
