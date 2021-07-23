@@ -1,2 +1,2 @@
 # benoit-test-nodeapp
-test6
+test7
