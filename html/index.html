@@ -10,10 +10,16 @@ LICENSE file in the root directory of this source tree.
     <title id="app_title">Application TEST OC</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- we use a local copy of carbon css and js
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
     <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+    -->
+    <link rel="stylesheet" type="text/css" href="./carbon-components.min.css">
+    <script src="./carbon-components.min.js"></script>
     <script type="module">
-      import 'https://1.www.s81c.com/common/carbon-for-ibm-dotcom/latest/ibmdotcom-web-components-dotcom-shell.min.js';
+      // we use a local copy of ibm-dotcom components js
+      //import 'https://1.www.s81c.com/common/carbon-for-ibm-dotcom/latest/ibmdotcom-web-components-dotcom-shell.min.js';
+      import './ibmdotcom-web-components-dotcom-shell.min.js';
       // The minimum prerequisite to properly set the current language/locale on the page
       window.digitalData = {
         page: {
